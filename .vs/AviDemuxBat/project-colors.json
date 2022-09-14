@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "07f2febb-d395-4db6-b250-cf2fa39adc50": {
+      "ProjectGuid": "07f2febb-d395-4db6-b250-cf2fa39adc50",
+      "DisplayName": "AviDemuxBat",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

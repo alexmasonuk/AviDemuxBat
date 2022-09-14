@@ -1,0 +1,15 @@
+D:\Dropbox\Work\Programming\Visual Studio\AviDemuxBat\bin\Debug\AviDemuxBat.exe.config
+D:\Dropbox\Work\Programming\Visual Studio\AviDemuxBat\bin\Debug\AviDemuxBat.exe
+D:\Dropbox\Work\Programming\Visual Studio\AviDemuxBat\bin\Debug\AviDemuxBat.pdb
+D:\Dropbox\Work\Programming\Visual Studio\AviDemuxBat\obj\Debug\AviDemuxBat.csproj.CoreCompileInputs.cache
+D:\Dropbox\Work\Programming\Visual Studio\AviDemuxBat\obj\Debug\AviDemuxBat.exe
+D:\Dropbox\Work\Programming\Visual Studio\AviDemuxBat\obj\Debug\AviDemuxBat.pdb
+D:\Dropbox\Work\Programming\Visual Studio\AviDemuxBat\obj\Debug\AviDemuxBat.csproj.AssemblyReference.cache
+C:\Users\Alex Mason\Dropbox\Work\Programming\Visual Studio\AviDemuxBat\obj\Debug\AviDemuxBat.csproj.AssemblyReference.cache
+C:\Users\Alex Mason\Dropbox\Work\Programming\Visual Studio\AviDemuxBat\obj\Debug\AviDemuxBat.csproj.SuggestedBindingRedirects.cache
+C:\Users\Alex Mason\Dropbox\Work\Programming\Visual Studio\AviDemuxBat\obj\Debug\AviDemuxBat.csproj.CoreCompileInputs.cache
+C:\Users\Alex Mason\Dropbox\Work\Programming\Visual Studio\AviDemuxBat\obj\Debug\AviDemuxBat.exe
+C:\Users\Alex Mason\Dropbox\Work\Programming\Visual Studio\AviDemuxBat\obj\Debug\AviDemuxBat.pdb
+C:\Users\Alex Mason\Dropbox\Work\Programming\Visual Studio\AviDemuxBat\bin\Debug\AviDemuxBat.exe.config
+C:\Users\Alex Mason\Dropbox\Work\Programming\Visual Studio\AviDemuxBat\bin\Debug\AviDemuxBat.exe
+C:\Users\Alex Mason\Dropbox\Work\Programming\Visual Studio\AviDemuxBat\bin\Debug\AviDemuxBat.pdb
