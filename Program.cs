@@ -27,6 +27,10 @@
 *              output and also the script to be run. Supports .mov, . avi, .mp4, *
 *              and .mkv. More filetypes can be added if needed.  It is also      *
 *              possible to launch the batch file from the cmd line (v0.1).       *
+* 17.09.2022: Fixed bug reported by Ed where the application could not be        *
+*             executed from outside the working directory of the application     *
+*             itself. Paths updated to absolute using the call                   *
+*             System.Reflection.Assembly.GetExecutingAssembly().Location.        *
 *                                                                                *
 *********************************************************************************/
 
@@ -44,12 +48,16 @@ namespace AviDemuxBat
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Running AviDemuxBat process by Alex Mason, v0.1.");
+            Console.WriteLine("Running AviDemuxBat process by Alex Mason, v0.2.");
 
-            // Set up static variable
-            string pathToCreateBat = @"output\AviDemuxBatProcess.bat";
-            string pathToApp = Directory.GetCurrentDirectory() + @"\";
+            // Set up static variables. Note that System.Reflection... call will give the full path
+            // to the application, and the executable name must be removed. This allows the application
+            // to work properly regardless of where it is called from.
+            string fullPathToApp = System.Reflection.Assembly.GetExecutingAssembly().Location;
+            FileInfo fi = new FileInfo(fullPathToApp);
+            string pathToApp = fi.DirectoryName + @"\";
             string pathToAviDemux = pathToApp +  @"avidemux\AvidemuxPortable.exe";
+            string pathToCreateBat = pathToApp + @"output\AviDemuxBatProcess.bat";
 
             // Process arguments
             if (args.Length != 3)
@@ -81,11 +89,13 @@ namespace AviDemuxBat
                 return;
             }
 
-            // Script to use
+            // Script to use.
             string pathToScript = pathToApp + "scripts\\" + args[2];
-            if(!File.Exists(pathToScript))
+            Console.WriteLine("DEBUG: pathToScript=" + pathToScript);
+           
+            if (!File.Exists(pathToScript))
             {
-                Console.WriteLine("SCRIPT could not be foudn. Check and try again.");
+                Console.WriteLine("SCRIPT could not be found. Check and try again.");
                 return;
             }
 
@@ -129,9 +139,9 @@ namespace AviDemuxBat
                 string response = Console.ReadLine().ToString();
                 if (response == "y")
                 {
-                    Console.WriteLine("Launching process " + pathToApp + pathToCreateBat + "...");
+                    Console.WriteLine("Launching process " + pathToCreateBat + "...");
                     Process p = new Process();
-                    p.StartInfo = new ProcessStartInfo("cmd.exe", "/c \"" + (pathToApp + pathToCreateBat) + "\"");
+                    p.StartInfo = new ProcessStartInfo("cmd.exe", "/c \"" + pathToCreateBat + "\"");
                     p.Start();
                     Console.WriteLine("Process started, do not close this window.");
                     while(!p.HasExited)
